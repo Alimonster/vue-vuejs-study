@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div id="app">
+       <h2>当前计数:{{counter}}</h2>
+       <!-- <button v-on:click="counter++">+</button>
+       <button v-on:click="counter--">-</button> -->
+        <button v-on:click="add">+</button>
+        <button @click="sub">-</button>
+        <!-- 语法糖:简写v-on:click====@click -->
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+      const obj = {
+          counter:0,
+          message:'abc'
+      }
+      new Vue()
+        const app = new Vue({
+            el: '#app',
+            data: obj,
+            methods: {
+                add(){
+                    this.counter++;
+                },
+                sub(){
+                    this.counter--;
+                }
+            },
+            beforeCreate:function() {
+            
+            },
+            created:function() {
+                console.log('created');
+            },
+            mounted:function () {
+                console.log('mounted');
+            }
+            
+        })
+
+    </script>
+</body>
+
+</html>

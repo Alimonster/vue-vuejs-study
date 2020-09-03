@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id = "app">
+  <img v-bind:src:"imgURL" alt="">
+   <a href="http://www.baidu.com">baiduyixia</a>
+
+   
+   <!-- 语法糖的写法 -->
+   <img :src:"imgURL" alt="">
+   <a href="aHref">baiduyixia</a>
+</div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '你好哇',
+               imgURL:"图片地址",
+               aHref:"http://www.baidu.com"
+            }
+        })
+    </script>
+
+</body>
+</html>
